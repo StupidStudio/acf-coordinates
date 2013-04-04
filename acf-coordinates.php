@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: Advanced Custom Fields: Coordinates field
+Plugin Name: Advanced Custom Fields: Coordinates
 Plugin URI: 
 Description: Adds a coordinates map field to Advanced Custom Fields. This field allows you to find the coordinates of a location.
 Version: 0.7.0
