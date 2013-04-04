@@ -164,7 +164,7 @@ jQuery(function($) {
          * @param   msg
          */
         var ReportError = function(msg) {
-            console.log(msg);
+            if (window.console) console.log(msg);
         };
 
         return function() {
