@@ -66,7 +66,7 @@ class acf_field_coordinates extends acf_field
 
         // load scripts and styles
         wp_enqueue_style(array('acf-coordinates-field'));
-        wp_enqueue_script(array('acf-coordinates-googlemaps-api', 'acf-coordinates-map'));
+        wp_enqueue_script(array('googlemaps-api', 'acf-coordinates-map'));
     }
 
     /*
