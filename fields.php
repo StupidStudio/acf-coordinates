@@ -132,7 +132,8 @@ class acf_field_coordinates extends acf_field
      * @param   $post_id - the id of the loaded post
      * @param   $field - the field array holding all the field options
      */
-    public function format_value_for_api($value, $post_id, $field) {
+    public function format_value_for_api($value, $post_id, $field)
+    {
         $value_arr = json_decode($value, true);
         unset($value_arr['zoom']);
         return $value_arr;
