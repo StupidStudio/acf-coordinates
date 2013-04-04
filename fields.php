@@ -61,7 +61,7 @@ class acf_field_coordinates extends acf_field
     {
         // register scripts and css
         wp_register_style('acf-coordinates-field', $this->settings['dir'].'css/fields.css'); 
-        wp_register_script("googlemaps-api", "https://maps.googleapis.com/maps/api/js?sensor=false");
+        wp_register_script("googlemaps-api", "//maps.googleapis.com/maps/api/js?sensor=false");
         wp_register_script('acf-coordinates-map', $this->settings['dir'].'js/map.js'); 
 
         // load scripts and styles
