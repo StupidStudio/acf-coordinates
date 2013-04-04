@@ -86,6 +86,8 @@ class acf_field_coordinates extends acf_field
         $zoom = $field['zoom'];
 
         // generate a unique id and put it as suffix to the fields name
+        // the field name includes [ and ] so we just replace them with
+        // more proper values for use in an html attribute
         $ptrns = array('/\[/', '/\]/');
         $rplcs = array('_', '');
         $uid = preg_replace($ptrns, $rplcs, $field['name']);
