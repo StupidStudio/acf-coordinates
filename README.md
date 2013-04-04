@@ -12,7 +12,7 @@ gpl.txt included with this software for more detail.
 
 ### Backend
 
-Install this plugin by downloading [the source](https://github.com/ChrisBuchholz/mencfs/archive/master.zip)
+Install this plugin by downloading [the source](https://github.com/StupidStudio/acf-coordinates/archive/master.zip)
 and unzipping it into the plugin folder in your WordPress installation. Make
 sure to also have ACF installed.
 
@@ -25,6 +25,7 @@ a post with your custom fields.
 To get the coordinates data in your frontend, simply request the field value
 and in return you get the latitude, longitude and the address.
 
+    <?php
     $values = get_field('*****FIELD_NAME*****');
     $lat = $values['lat'];
     $lng = $values['lng'];
