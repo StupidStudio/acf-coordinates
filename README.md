@@ -5,6 +5,10 @@ This add-on to [Advanced Custom Fields (ACF)](http://www.advancedcustomfields.co
 makes it easy to add coordinates to your posts by choosing the location on a
 visual map or by searching for an address.
 
+We developed at it [Stupid Studio](http://stupid-studio.com/ "Stupid Studio")
+because we felt that the existing alternatives — like [ACF { Location Field](https://github.com/elliotcondon/acf-location-field "ACF { Location Field")
+— were lacking and that we could do better.
+
 This software is licensed under the GNU General Public License version 3. See
 gpl.txt included with this software for more detail.
 
