@@ -20,7 +20,7 @@
 
 class acf_field_coordinates extends acf_field
 {
-    private $defaults; // default field options
+    public $defaults; // default field options
 
     /*
      * __construct
