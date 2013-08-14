@@ -101,8 +101,8 @@ jQuery(function($) {
             // detect when the map marker is moved and recalculate location
             // coordinates and tell updateUI about it when it happens
             google.maps.event.addListener(this.marker, 'dragend', function(mapEvent) {
-                var lat = mapEvent.latLng['jb'],
-                    lng = mapEvent.latLng['kb'],
+                var lat = mapEvent.latLng.lat(),
+                    lng = mapEvent.latLng.lng(),
                     // use the last typed address as the name of the address
                     // when the marker is dragged
                     address = self.input_elm.val();
@@ -121,11 +121,9 @@ jQuery(function($) {
             var self = this;
             this.geocoder.geocode({'address': address}, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
-                    var latlng = results[0].geometry.location,
-                        lat = latlng['jb'],
-                        lng = latlng['kb'];
-                    self.map.setCenter(new google.maps.LatLng(lat, lng));
-                    self.UpdateUI(lat, lng, address);
+                    var latlng = results[0].geometry.location;
+                    self.map.setCenter(latlng);
+                    self.UpdateUI(latlng.lat(), latlng.lng(), address);
                 }
                 else {
                     self.ReportError("Failed to load location");
