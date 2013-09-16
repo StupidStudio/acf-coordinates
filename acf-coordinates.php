@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Advanced Custom Fields: Coordinates
-Plugin URI: 
+Plugin URI: https://github.com/StupidStudio/acf-coordinates/
 Description: Adds a coordinates map field to Advanced Custom Fields. This field allows you to find the coordinates of a location.
 Version: 1.0.0
 Author: Stupid Studio
