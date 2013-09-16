@@ -183,8 +183,11 @@ jQuery(function($) {
 
     // find each map on the page and hook it up by create a new instance of
     // CoordinatesMap for each of the maps
-    $('.location_coordinates_map').each(function() { 
-        new CoordinatesMap($(this));
+    $(document).live('acf/setup_fields', function(ev, div) {
+        $(div).find('.location_coordinates_map').each(function() {
+            new CoordinatesMap($(this));
+        });
     });
+
 
 });
