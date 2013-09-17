@@ -145,7 +145,7 @@ jQuery(function($) {
 
             this.input_elm.val(address);
             this.coordinates_elm.text(lat + ", " + lng);
-            
+
             var values = {
                 'address': address,
                 'lat': lat,
@@ -183,7 +183,7 @@ jQuery(function($) {
 
     // find each map on the page and hook it up by create a new instance of
     // CoordinatesMap for each of the maps
-    $(document).live('acf/setup_fields', function(ev, div) {
+    $(document).on('acf/setup_fields', function(ev, div) {
         $(div).find('.location_coordinates_map').each(function() {
             new CoordinatesMap($(this));
         });
