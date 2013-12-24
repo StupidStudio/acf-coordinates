@@ -85,7 +85,14 @@ jQuery(function($) {
             self.input_elm.keypress(function(e) {
                 if (e.keyCode == 13) {
                     e.preventDefault();
-                    self.ResolveAddress($(this).val());
+                    if(/[a-zA-Z]/.test(($(this).val()))){
+                        self.ResolveAddress($(this).val());
+                    } else {
+                        var coords = $(this).val().split(/[\s,]+/);
+                        var newPosition = new google.maps.LatLng(coords[0], coords[1]);
+                        self.map.setCenter(newPosition);
+                        self.UpdateUI(newPosition.lat(), newPosition.lng(), $(this).val());
+                    }
                 }
             });
 
